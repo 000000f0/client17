@@ -6,16 +6,11 @@ import HomePage from './pages/home_page';
 import AboutPage from './pages/about_page';
 import MintPage from './pages/mint_page';
 import ContactPage from './pages/contact_page';
-
-import DiscordPage from './pages/discord_page';
-
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import EmailPage from './pages/email_page';
 
 
 function App() {
@@ -52,12 +47,6 @@ function App() {
               <li>
                 <Link to="/contact" style={{ color: isDarkMode ? '#FFFFFF' : '#000000' }}>Contact</Link>
               </li>
-              <li>
-                <Link to="/email" style={{ color: isDarkMode ? '#FFFFFF' : '#000000' }}>Email</Link>
-              </li>
-              <li>
-                <Link to="/discord" style={{ color: isDarkMode ? '#FFFFFF' : '#000000' }}>Discord</Link>
-              </li>
               </ul>
             <div className="toggle-container" onClick={handleToggle}>
             <div style={{ color: isDarkMode ? '#fff' : '#000' }}>
@@ -72,9 +61,6 @@ function App() {
   <Route path="/about" element={<AboutPage isDark={isDarkMode} />} />
   <Route path="/mint" element={<MintPage isDark={isDarkMode} />} />
   <Route path="/contact" element={<ContactPage isDark={isDarkMode} />} />
-
-  <Route path="/email" element={<EmailPage isDark={isDarkMode} />} />
-<Route path="/discord" element={<DiscordPage isDark={isDarkMode} />} />
 </Routes>
 
         <footer  style={{ background: isDarkMode ? '#000' : '#fff' }}>
